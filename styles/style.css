@@ -7,10 +7,10 @@
 
   font-family: var(--main-font-family, 'Courier New', Courier, monospace);
   font-size: var(--main-font-size, 18px);
-  line-height: var(--main-line-height);
+  line-height: var(--main-line-height, 130%);
   font-style: normal;
   font-weight: 400;
-  color: var(--text-color);
+  color: var(--text-color, #F1B2CE);
 
   background-color: var(--bg-color, gray);
   background-image: url(../images/cover-image-dark.png);
@@ -28,7 +28,7 @@
   grid-template-columns: 1fr;
   justify-content: space-between;
   min-block-size: 668px;
-  block-size: 100vb;
+  min-block-size: 100vb;
   padding: var(--indent, 10px);
 }
 
@@ -45,16 +45,16 @@
   inset-block-end: var(--indent, 10px);
   inset-inline-start: var(--indent, 10px);
   
-  border-block-end: 1px solid var(--accent-color-secondary);
-  border-inline-start: 1px solid var(--accent-color-secondary);
+  border-block-end: 1px solid var(--accent-color-secondary, #FF0070);
+  border-inline-start: 1px solid var(--accent-color-secondary, #FF0070);
 }
 
 .decorated-zone::after {
   inset-block-start: var(--indent, 10px);
   inset-inline-end: var(--indent, 10px);
   
-  border-block-start: 1px solid var(--accent-color-secondary);
-  border-inline-end: 1px solid var(--accent-color-secondary);
+  border-block-start: 1px solid var(--accent-color-secondary, #FF0070);
+  border-inline-end: 1px solid var(--accent-color-secondary, #FF0070);
 }
 
 .header__decor {
@@ -62,7 +62,7 @@
   inset-inline-end: 39px;
   inset-block-start: 11px;
 
-  color: var(--accent-color);
+  color: var(--accent-color, #FF0070);
   font: inherit;
   line-height: 138%;
   text-transform: uppercase;
@@ -80,9 +80,9 @@
   block-size: 7px;
   border-radius: 50%;
 
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #FF0070);
 
-  box-shadow: 0 0 3px 3px var(--accent-color);
+  box-shadow: 0 0 3px 3px var(--accent-color, #FF0070);
 }
 
 .header__theme-menu {
@@ -97,7 +97,7 @@
 }
 
 .header__theme-menu-item {
-  color: var(--accent-color-secondary);
+  color: var(--accent-color-secondary, #FF0070);
   font: inherit;
 }
 
@@ -113,7 +113,7 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--button-outline-hover);
+  outline: 1px solid var(--button-outline-hover, rgba(255, 0, 112, 0.40));
 }
 
 .header__theme-menu-button:focus-visible {
@@ -123,17 +123,17 @@
 .header__theme-menu-button_active {
   pointer-events: none;
 
-  outline: 1px solid var(--accent-color-secondary);
+  outline: 1px solid var(--accent-color-secondary, #FF0070);
 }
 
 .header__title {
   color: var(--header-title);
   font-family: inherit;
-  font-size: var(--logo-size);
+  font-size: var(--logo-size, clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem));
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%;
-  text-shadow: 4px 4px 0px var(--accent-color-logo);
+  text-shadow: 4px 4px 0px var(--accent-color-logo, #FF0070);
 }
 
 .header__description {
@@ -144,11 +144,11 @@
 }
 
 .title-decor {
-  color: var(--bg-color);
+  color: var(--bg-color, #000028);
   font: inherit;
   font-weight: 700;
   
-  background-color: var(--accent-color);
+  background-color: var(--accent-color, #FF0070);
 }
 
 .main {
@@ -167,7 +167,7 @@
 .section__title {
   font: inherit;
   font-weight: 700;
-  color: var(--accent-color);
+  color: var(--accent-color, #FF0070);
 }
 
 .section__subtitle {
@@ -184,7 +184,7 @@
 
 .section__link {
   text-decoration: none;
-  text-shadow: 2px 1px 0 var(--accent-color);
+  text-shadow: 2px 1px 0 var(--accent-color, #FF0070);
 
   cursor: pointer;
 }
@@ -204,6 +204,8 @@
 .section__image {
   inline-size: 100%;
   block-size: auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 .footer {
@@ -218,13 +220,13 @@
 }
 
 .footer__title {
-  color: var(--header-title);
+  color: var(--header-title, #DB00FF);
   font-family: inherit;
-  font-size: var(--logo-size);
+  font-size: var(--logo-size, clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem));
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%;
-  text-shadow: 2px 2px 0px var(--accent-color-logo);
+  text-shadow: 2px 2px 0px var(--accent-color-logo, #FF0070);
 }
 
 @media (width >= 768px) {
